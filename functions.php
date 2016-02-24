@@ -22,7 +22,7 @@ register_nav_menus(
 /* Enque Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
-function less_scripts()  { 
+function custom_scripts()  { 
 
 	// theme styles
 	wp_enqueue_style( 'less-style', get_template_directory_uri() . '/style.css', '10000', 'all' );
@@ -34,4 +34,4 @@ function less_scripts()  {
 	wp_enqueue_script( 'less', get_template_directory_uri() . '/js/theme.min.js', array(), LESS_VERSION, true );
   
 }
-add_action( 'wp_enqueue_scripts', 'less_scripts' );
+add_action( 'wp_enqueue_scripts', 'custom_scripts' );

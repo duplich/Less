@@ -65,30 +65,35 @@
 
 					<article class="post">
 					
-						<h1 class="title">
+						<h2 class="title">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php the_title() ?>
 							</a>
-						</h1>
-						<div class="post-meta">
+						</h2>
+					<!-- 	<div class="post-meta">
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
 									<?php comments_popup_link( __( 'Comment', 'break' ), __( '1 Comment', 'break' ), __( '% Comments', 'break' ) ); ?>
 								</span>
 							<?php endif; ?>
 						
-						</div><!--/post-meta -->
+						</div> -->
+						<!--/post-meta -->
 						
-						<div class="the-content">
+				<!-- 		<div class="the-content">
 							<?php the_content( 'Continue...' ); ?>
 							
 							<?php wp_link_pages(); ?>
-						</div><!-- the-content -->
+						</div> -->
+						<!-- the-content -->
 						
 						<div class="meta clearfix">
+						
 							<div class="category"><?php echo get_the_category_list(); ?></div>
 							<div class="tags"><?php echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); ?></div>
-						</div><!-- Meta -->
+							&nbsp; | &nbsp;<?php echo get_the_date(); ?>
+						</div>
+						<!-- Meta -->
 						
 					</article>
 
@@ -128,14 +133,15 @@
 					<article class="post">
 					
 						<h1 class="title"><?php the_title() ?></h1>
-						<div class="post-meta">
+						<!-- <div class="post-meta">
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
 									<?php comments_popup_link( __( 'Comment', 'less' ), __( '1 Comment', 'less' ), __( '% Comments', 'less' ) ); ?>
 								</span>
 							<?php endif; ?>
 						
-						</div><!--/post-meta -->
+						</div> -->
+						<!--/post-meta -->
 						
 						<div class="the-content">
 							<?php the_content( 'Continue...' ); ?>
@@ -144,6 +150,7 @@
 						</div><!-- the-content -->
 						
 						<div class="meta clearfix">
+						
 							<div class="category"><?php echo get_the_category_list(); ?></div>
 							<div class="tags"><?php echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); ?></div>
 						</div><!-- Meta -->						
